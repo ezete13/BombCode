@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desactiva la BOMBA!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comic+Neue&display=swap">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Tilt+Neon&display=swap');
+
+        body {
+            font-family: 'Tilt Neon', sans-serif;
+            background: url('ruta_de_tu_imagen_de_fondo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 500px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 50px; /* Tamaño de fuente más grande para el título */
+        }
+
+        .change-code-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 10px; /* Tamaño de fuente más grande para el botón de cambio */
+        }
+
+        .change-code-button:hover {
+            background-color: #ff0000;
+            color: #fff;
+        }
+
+        #codigo {
+            width: 100%;
+            padding: 20px; /* Aumenta el tamaño del campo de entrada */
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px; /* Aumenta el radio de borde */
+            font-size: 24px; /* Tamaño de fuente más grande para el campo de entrada */
+        }
+
+        #validarBtn {
+            width: 100%;
+            padding: 15px;
+            background-color: #8438cc;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 50px; /* Tamaño de fuente más grande para el botón de validar */
+        }
+
+        /* Estilo para el texto de resultado */
+        #resultadoTexto {
+            display: none;
+            font-size: 36px; /* Tamaño de fuente más grande para el resultado */
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        #resultadoTexto.correcto {
+            color: #00cc00;
+        }
+
+        #resultadoTexto.incorrecto {
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://media.tenor.com/VeKts8KQaUsAAAAi/purebreak-bomba.gif" alt="Bomba">
+        <h1>CODIGO DE DESACTIVACIÓN</h1>
+        <label class="change-code-button">.</label>
+        <input type="text" id="codigo">
+        <button id="validarBtn">INTENTAR</button>
+        <div id="resultadoTexto"></div>
+    </div>
+
+    <script src="validacion.js"></script>
+</body>
+</html>
